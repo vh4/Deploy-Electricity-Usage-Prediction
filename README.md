@@ -12,5 +12,6 @@ Program usage electict prediction using python environtment. i'm using Long Shor
 
 1. install python 3.7^
 2. install requuirements in library import
-3. python3 train.py
-4. python3 predict.py
+3. ./Scripts/activate
+4. python3 train.py
+5. python3 predict.py
