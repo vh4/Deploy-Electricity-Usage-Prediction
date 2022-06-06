@@ -1,4 +1,4 @@
-# Electricity Usage Prediction 🚀
+# Deployment Electricity Usage Prediction 🚀
 
 Program usage electict prediction using python environtment. i'm using Long Short-Term Memory to make model training and then, predict electricity usage for 1 day.
 
