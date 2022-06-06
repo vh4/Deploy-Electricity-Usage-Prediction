@@ -2,7 +2,7 @@
 
 Program usage electict prediction using python environtment. i'm using Long Short-Term Memory to make model training and then, predict electricity usage for 1 day.
 
-# Descriptions
+# Description
 
 - [x] python train.py   : for training to make model LSTM with 7 day data
 - [x] python predict.py : for predict with 1 day data
