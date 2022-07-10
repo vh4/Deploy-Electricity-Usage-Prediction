@@ -27,12 +27,12 @@ def PelatihanModel():
             os.system('cls')
             print("still in the process of collecting data for training. wait until the data is complete!")
             #time.sleep(60) # 1 minute
+            break
         else:
             model = Predict(serialnumber)
             model.fit()
-            print("done proccess training!")
-            break
+            print("done proccess training!")  
             #time.sleep(1728000) #each 20 days, models is training
-           
+            break
 #execution of model prediction function
 PelatihanModel()

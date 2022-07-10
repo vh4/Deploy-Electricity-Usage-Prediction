@@ -8,12 +8,8 @@ import tensorflow as tf
 from tensorflow.keras import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.models import load_model
-from colorama import init
-from tqdm import trange
-from colorama import Style, Fore, Back
 import time
 import os
-init()
 
 class LSTM():
 
@@ -33,9 +29,8 @@ class LSTM():
             # load model with tensorflow and examples => see below the model that has been trained and is being trained again
             # the model will learn more and be smarter (the more it reduces the error value to as small as possible!)
 
-            print(Fore.CYAN, "Model already exists, model training will be conducted to improve model performance!")
+            print("Model already exists, model training will be conducted to improve model performance!")
             print("")
-            print(Style.RESET_ALL)
 
             self.model = load_model('./uelib/model/lstm.h5')
 
@@ -43,9 +38,8 @@ class LSTM():
             self.hasil = self.model.fit(X_train_for_predict, y_train_for_predict, epochs=150, batch_size=1)
         else:
 
-            print(Fore.RED, ".h5 model does not exist, the proccess will do to make model !")
+            print(".h5 model does not exist, the proccess will do to make model !")
             print("")
-            print(Style.RESET_ALL)
             time.sleep(1)
             self.model = Sequential([
                 tf.keras.layers.LSTM(128, activation='relu', input_shape=(self.n_input, self.n_output_label)),

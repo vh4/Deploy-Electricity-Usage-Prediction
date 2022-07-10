@@ -4,11 +4,7 @@
 
 import pandas as pd
 import time
-from colorama import init
-from colorama import Style, Fore, Back
 import numpy as np
-import os
-init()
 
 class Preprocessing():
 
@@ -56,7 +52,6 @@ class Preprocessing():
             if self.pemakaian_data['pemakaian_listrik'].isna().sum() > 0:
 
                 print("- There is data that is empty, fill in the data with the average !")
-                print(Style.RESET_ALL)
 
                 time.sleep(1)
 
@@ -66,17 +61,13 @@ class Preprocessing():
 
                 self.pemakaian_data['pemakaian_listrik'] = self.pemakaian_data['pemakaian_listrik'].mask(self.pemakaian_data['pemakaian_listrik']==0).fillna(self.pemakaian_data['pemakaian_listrik'].mean())
 
-                print(Fore.GREEN, "- NULL data added successfully !")
-                print(Style.RESET_ALL)
+                print("- NULL data added successfully !")
 
             else:
                 pass
         except:
-            print(Back.RED, '- Data error occurred !!')
-            print(Style.RESET_ALL)
+            print('- Data error occurred !!')
 
-        #menampilkan 5 data awal yang sudah diresampling
-        print(Style.RESET_ALL)
         return self.pemakaian_data
 
     def slidingwindow(self, data_window, window_size):

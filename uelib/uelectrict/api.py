@@ -1,10 +1,6 @@
 import time
 import requests
 import tensorflow as tf
-from colorama import init
-init()
-from tqdm import trange
-from colorama import Style, Fore, Back
 
 class Api:
 

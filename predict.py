@@ -27,6 +27,7 @@ def PrediksiModel():
             os.system('cls')
             print("still in the process of collecting actual data for prediction!")
             #time.sleep(60)
+            break
         else:
             model = Predict(serialnumber)
             model.predict()
