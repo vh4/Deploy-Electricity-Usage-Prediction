@@ -11,7 +11,7 @@ import os
 #table lstm used to upload data
 #user id = your user id
 
-serialnumber = "ASBZY-KMY6D-5QGYK-OBO9W"
+serialnumber = "20220812-1"
 n_input = 5
 #data actual
 api = Api()

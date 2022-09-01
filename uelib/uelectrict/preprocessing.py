@@ -30,14 +30,6 @@ class Preprocessing():
 
         #mengisi tanggal dan data yang kosong ( reindex the data )
 
-        #kasus 1
-        #misalkan program prediksi memerlukan 24 data. data terakhir 08 Mei 2022 01:00. dan sekarang mati lampu sampai besok. 
-        #lalu program akan memprediksi pada tanggal 08 Mei 2022 03:00 maka progran akan mengambil data dari
-        #waktu 08 Mei 2022 01:00 -  07 Mei 2022 01:00 sebelumnya yang berjumlah total 24 data.
-
-        #kasus 2
-        #misalkan program prediksi memerlukan 24 data. data terakhir 08 Mei 2022 01:00. dan mati lampu 
-        #pada waktu 7 mei 2022 22:00 - 00:00. maka   
         self.my_range = pd.date_range(start=self.data_df[:1].index[0], end=self.data_df[-1:].index[0], freq='H')
         self.data_df = self.data_df.reindex(self.my_range, fill_value=None)
 

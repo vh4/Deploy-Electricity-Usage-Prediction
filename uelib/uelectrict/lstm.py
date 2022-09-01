@@ -34,8 +34,7 @@ class LSTM():
 
             self.model = load_model('./uelib/model/lstm.h5')
 
-            #see the MAPE metric error -> weight and bias are not random and start from the results of the training above earlier.
-            self.hasil = self.model.fit(X_train_for_predict, y_train_for_predict, epochs=150, batch_size=1)
+            self.hasil = self.model.fit(X_train_for_predict, y_train_for_predict, epochs=50, batch_size=1)
         else:
 
             print(".h5 model does not exist, the proccess will do to make model !")

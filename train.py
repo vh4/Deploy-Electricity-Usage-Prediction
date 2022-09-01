@@ -11,7 +11,7 @@ import os
 #table lstm used to upload data
 #user id = your user id
 
-serialnumber = "ASBZY-KMY6D-5QGYK-OBO9W"
+serialnumber = "20220812-1"
 n_input = 5
 #data actual
 api = Api()
@@ -23,7 +23,7 @@ print("")
 def PelatihanModel():
     print("is running on the model training function")
     while True:
-        if jumlah_data_aktual < 400: #requires min 400 data ( sekitar 20days) to run the model training function (if the model does not already exist)
+        if jumlah_data_aktual < 29: #requires min 29 data
             os.system('cls')
             print("still in the process of collecting data for training. wait until the data is complete!")
             #time.sleep(60) # 1 minute
