@@ -55,7 +55,7 @@ class LSTM():
             #1 epochs => 1x all training data from top to bottom to completion.
             #fit generator to execute the model.
 
-            self.hasil = self.model.fit(X_train_for_predict, y_train_for_predict,  epochs=150, batch_size=1)
+            self.hasil = self.model.fit(X_train_for_predict, y_train_for_predict, epochs=150, batch_size=1)
 
         print("")
 

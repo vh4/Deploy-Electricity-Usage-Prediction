@@ -26,13 +26,13 @@ def PrediksiModel():
         if jumlah_data_aktual < 24 + n_input: #need min 28 data to run the program
             os.system('cls')
             print("still in the process of collecting actual data for prediction!")
-            #time.sleep(60)
-            break
+            time.sleep(60)
+            #break
         else:
             model = Predict(serialnumber)
             model.predict()
             print("done proccess prediction!")
-            break
-            #time.sleep(86400) #each  1 days akan di prediksi
+            #break
+            time.sleep(86400) #each  1 days akan di prediksi
 #execution of model prediction function
 PrediksiModel()
